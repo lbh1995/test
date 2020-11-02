@@ -1,111 +1,11 @@
 package com.company;
-import net.sf.cglib.core.TinyBitSet;
 
-import javax.jnlp.ClipboardService;
-import javax.swing.*;
-import java.io.*;
-import java.lang.reflect.Method;
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.concurrent.*;
 
 import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
-
-/*
-public class Migu01 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int numNode = scanner.nextInt();
-        int numStep = scanner.nextInt();
-        int S[] = new int[numNode - 1];
-        for (int i = 0; i < S.length; i++) {
-            S[i] = scanner.nextInt();
-        }
-        ArrayList<Integer>[] arrayLists = new ArrayList[numNode];
-        for (int i = 0; i < arrayLists.length; i++) {
-            arrayLists[i] = new ArrayList<>();
-        }
-        for (int i = 0; i < S.length; i++) {
-            arrayLists[i + 1].add(S[i]);
-            arrayLists[S[i]].add(i + 1);
-        }
-        boolean[] visite = new boolean[numNode];
-        visite[0] = true;
-        int []result={numStep};
-        DFS(arrayLists,  result, numStep, 0, visite);
-        int res=numStep-result[0];
-        System.out.println(res+1+result[0]/2 );
-    }
-
-    private static void DFS(ArrayList<Integer>[] arrayLists, int[] result, int numStep, int i, boolean[] visite ) {
-        boolean flag=false;
-        for (int j = 0; j < arrayLists[i].size(); j++) {
-            if (!visite[arrayLists[i].get(j)]) {
-                flag=true;
-                break;
-            }
-        }
-        if(!flag){
-            result[0] = Math.min(result[0], numStep);
-        }
-        else {
-            for (int j = 0; j < arrayLists[i].size(); j++) {
-                if (!visite[arrayLists[i].get(j)]) {
-                    visite[arrayLists[i].get(j)] = true;
-                    DFS(arrayLists, result, numStep - 1, arrayLists[i].get(j), visite);
-                    visite[arrayLists[i].get(j)]=false;
-                }
-            }
-        }
-    }
-}
-
-class Solution:
-    def __init__(self, boy, girl, edg):
-        self.boy = boy
-        self.girl = girl
-        self.edg = edg
-        self.p = [-1 for _ in range(10010)]
-        self.vis = [-1 for _ in range(10010)]
-
-    def match(self, i):
-        for g in self.girl:
-            if g in self.edg[i] and self.vis[g] == -1:
-                self.vis[g] = 1
-                if self.p[g] == -1 or self.match(self.p[g]):
-                    self.p[g] = i
-                    return True
-        return False
-
-    def solve(self):
-        cnt = 0
-        for b in self.boy:
-            self.vis = [-1 for _ in range(10010)]
-            if self.match(b):
-                cnt += 1
-        return cnt
 
 
-if __name__ == "__main__":
-    boy = list(map(lambda x: int(x), list(input().split(' '))))
-    girl = list(map(lambda x: int(x), list(input().split(' '))))
-    n = int(input())
-    edg = {}
-    for i in range(n):
-        b, g = map(lambda x: int(x), list(input().split(' ')))
-        if b in edg:
-            edg[b].append(g)
-        else:
-            edg[b] = [g]
-
-    s = Solution(boy, girl, edg)
-    print(s.solve())
-
- */
 
 class ExceptionA extends Exception{
 
