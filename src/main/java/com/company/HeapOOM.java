@@ -9,6 +9,7 @@ public class HeapOOM {
     }
 
     public static void main(String[] args) {
+        System.out.println("lbh_master");
         System.out.println("lbh_dev");
         List<OOMObject> list = new ArrayList<>();
         while (true){
