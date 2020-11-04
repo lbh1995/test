@@ -11,6 +11,7 @@ public class HeapOOM {
     public static void main(String[] args) {
         System.out.println("lbh_master");
         System.out.println("lbh_dev1");
+        System.out.println("conflict_master");
         List<OOMObject> list = new ArrayList<>();
         while (true){
             list.add(new OOMObject());
